@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default">
+
+<body>
+<div id="page" layout:fragment="content">
+    <div class="container">
+        <h2 class="text-center">Song upload: </h2>
+        <div class="row">
+            <div class="col-md-6 col-md-push-3">
+                <form class="text-right" id="upload-music" method="post" action="/song/add"
+                      enctype="multipart/form-data">
+                    <input class="form-control" type="text" name="name" placeholder="Song name" required><br>
+                    <input class="form-control" type="text" name="genre" placeholder="Song genre" required> <br>
+                    <input type="file" name="file">
+                    <button type="submit" form="upload-music" class="btn btn-info">SubmitAPI</button>
+                    <button type="submit" id="sbmt" form="upload-music" class="btn btn-primary">Upload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default">
+
+<body>
+<div id="page" layout:fragment="content">
+    <div class="container">
+        <h2 class="text-center">Song detail: </h2>
+        <div class="row">
+            <div class="col-md-6 col-md-push-3">
+                <audio controls>
+                    <source th:src="${song.link}" type="audio/mpeg">
+                </audio>
+                <table class="detail">
+                    <tr> <td> Name: </td><td th:text="${song.name}"></td></tr>
+                    <tr> <td> Genre: </td><td th:text="${song.genre}"></td></tr>
+                    <tr> <td> Last Update: </td><td th:text="${song.lastUpdate}"></td></tr>
+                </table>
+
+                <div class="text-right">
+                    <a type="button" class="btn btn-warning" th:href="@{'/edit/' + ${song.id}}">Edit</a>
+                    <a type="button" class="btn btn-danger" th:href="@{'/delete/' + ${song.id}}">Delete</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>

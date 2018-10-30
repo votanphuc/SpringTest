@@ -1,0 +1,49 @@
++ Add
++ Edit
++ Delete   
++ Play
++ show all,
++ show details
+- search 
+- multiple delete
+- paging
+- size limited
+- type limited
+- language
+- login
+
+===========================================
+@RestController vs @Controller ??
+
++ @Controller, @Service
++ Call Service in Controller use @Autowired  
++ Function in Controller use :
+	@PostMapping
+	@GetMapping 
+	@RequestMapping
+
+https://howtodoinjava.com
+
+===========================================
+thymeleaf 
+spring-boot
+mybatis vs ibatis ?
+
+===========================================
+Version MySQL 8.0.1 - collate=utf8mb4_0900_ac_ci:
+utf8mb4 : each character is stored as a maximum of 4bytes in utf8 encoding scheme
+0900 : Unicode Collation Alogrithm version 
+	(UCA: method used to compare 2 Unicode strings conforms to the requirements of the Unicode Standard)
+ai : accent insensitivity (no difference between a a` … a when sorting)
+ci : case insensitivity (no difference between p P when sorting)
+utf8mb4 : default character set
+utf8mb4_0900_ai_ci : default collation in MySQL 8.0.1 & later. Previously, utf8bm4_general_ci was default.
+
+utf8mb4_0900_as_cs : using for accent sensitivity and case sensitivity.
+
+===========================================
+> create 	> read 		> update 	> delete
+> post 		> get 		> put 		> delete
+> insert 		> select 	> update 	> delete
+
+===========================================

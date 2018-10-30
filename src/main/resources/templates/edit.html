@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default">
+
+<body>
+<div id="page" layout:fragment="content">
+    <div class="container">
+        <h2 class="text-center">Song edit: </h2>
+        <div class="row">
+            <div class="col-md-6 col-md-push-3">
+                <audio controls>
+                    <source th:src="${song.link}" type="audio/mpeg">
+                </audio>
+                <form class="text-right" id="save-music" method="post" action="/save">
+                    <input type="hidden" name="id" th:value="${song.id}"><br>
+                    <input class="form-control" type="text" onfocus="this.select();" name="name"
+                           th:value="${song.name}" required><br>
+                    <input class="form-control" type="text" onfocus="this.select();" name="genre"
+                           th:value="${song.genre}" required> <br>
+                    <button type="submit" form="save-music" class="btn btn-info">Save</button>
+                    <a class="btn btn-danger" th:href="@{'/delete/' + ${song.id}}">Delete</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
